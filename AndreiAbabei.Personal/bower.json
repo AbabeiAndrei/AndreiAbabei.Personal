@@ -1,8 +1,0 @@
-{
-  "name": "AndreiAbabei.Personal",
-  "private": true,
-  "directory" : "Scripts",
-  "dependencies": {
-    "angular": "1.6.9" 
-  }
-}

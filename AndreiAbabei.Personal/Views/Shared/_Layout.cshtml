@@ -6,18 +6,23 @@
     <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/angular")
 </head>
 <body>
-    <div class="container body-content">
+    <div class="left-col">
+
+    </div>
+    <div class="main-col">
         @RenderBody()
         <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - Andrei Ababei</p>
+        <footer class="footer">
+            <p>&copy; 2018 - Andrei Ababei</p>
         </footer>
     </div>
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+    @Scripts.Render("~/bower_components/angular/angular.min.js")
+    @RenderSection("scripts", false)
 </body>
 </html>
