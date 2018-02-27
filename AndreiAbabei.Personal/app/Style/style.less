@@ -1,0 +1,136 @@
+﻿.dl-horizontal dt {
+    white-space: normal;
+}
+
+input, select, textarea {
+    max-width: 280px;
+}
+
+.left-col {
+    width: 23%;
+    position: fixed;
+    height: 100%;
+    background: #2d3339;
+    padding: 0 10px;
+    padding-top: 80px;
+
+    img.me {
+        border-radius: 50%;
+        width: 200px;
+        height: 200px;
+        margin-left: 50px
+    }
+
+    p.name {
+        font-size: 47px;
+        color: white;
+        font-weight: 600
+    }
+
+    p.motto {
+        font-size: 16px;
+        color: lightgray;
+        text-align: end;
+        font-style: italic;
+    }
+
+    ul.menu {
+        margin-top: 60px;
+        list-style-type: none;
+
+        li > a {
+            font-size: 28px;
+            font-weight: 300;
+            color: white;
+        }
+
+        li > a, li > a:hover {
+            text-decoration: none;
+        }
+    }
+
+    div.social {
+        position: absolute;
+        bottom: 20px;
+
+        .list-unstyled {
+            padding-left: 0;
+            list-style: none;
+        }
+
+        .list-inline li {
+            display: inline-block;
+            padding-right: 5px;
+            padding-left: 5px;
+            margin-bottom: 10px;
+        }
+
+        .social-icons {
+            .fa {
+                font-size: 1.2em;
+                width: 35px;
+                height: 35px;
+                line-height: 35px;
+                text-align: center;
+                color: #FFF;
+                color: rgba(255, 255, 255, 0.8);
+                -webkit-transition: all 0.3s ease-in-out;
+                -moz-transition: all 0.3s ease-in-out;
+                -ms-transition: all 0.3s ease-in-out;
+                -o-transition: all 0.3s ease-in-out;
+                transition: all 0.3s ease-in-out;
+            }
+
+            &.icon-circle .fa {
+                opacity: .6;
+                border-radius: 50%;
+                -webkit-transition: opacity 0.2s ease-in-out;
+                -moz-transition: opacity 0.2s ease-in-out;
+                transition: opacity 0.2s ease-in-out;
+            }
+
+            .fa:hover, .fa:active {
+                color: #FFF;
+                -webkit-box-shadow: 1px 1px 3px #333;
+                -moz-box-shadow: 1px 1px 3px #333;
+                box-shadow: 1px 1px 3px #333;
+            }
+
+            .fa-github {
+                background-color: #070709;
+            }
+
+            .fa-linkedin {
+                background-color: #0085AE;
+            }
+
+            .fa-skype {
+                background-color: #01AEF2;
+            }
+
+            .fa-stack-overflow {
+                background-color: #FF7300;
+            }
+
+            .fa-twitter {
+                background-color: #32CCFE;
+            }
+        }
+
+        .icon-zoom .fa:hover, .social-icons.icon-zoom .fa:active {
+            opacity: 1;
+        }
+    }
+}
+
+.main-col {
+    position: absolute;
+    right: 0;
+    min-height: 100%;
+    width: 77%;
+    background: #fff;
+}
+
+.footer {
+    padding-left: 20px;
+}
