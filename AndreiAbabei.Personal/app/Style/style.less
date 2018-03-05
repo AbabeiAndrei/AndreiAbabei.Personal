@@ -1,4 +1,6 @@
-﻿.dl-horizontal dt {
+﻿@teal: #009688;
+
+.dl-horizontal dt {
     white-space: normal;
 }
 
@@ -11,18 +13,23 @@ input, select, textarea {
     position: fixed;
     height: 100%;
     background: #2d3339;
-    padding: 0 10px;
-    padding-top: 80px;
+
+    .main {
+        padding: 0 10px;
+        padding-top: 80px;
+    }
 
     img.me {
         border-radius: 50%;
         width: 200px;
         height: 200px;
-        margin-left: 50px
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     p.name {
-        font-size: 47px;
+        font-size: 2.7em;
         color: white;
         font-weight: 600
     }
@@ -35,13 +42,30 @@ input, select, textarea {
     }
 
     ul.menu {
-        margin-top: 60px;
+        margin-top: 30px;
         list-style-type: none;
 
         li > a {
             font-size: 28px;
             font-weight: 300;
             color: white;
+            transition: color .1s linear;
+            -webkit-transition: color .1s linear;
+            -moz-transition: color .1s linear;
+
+            &.active::after {
+                content: "";
+                width: 0;
+                height: 0;
+                border-top: 20px solid transparent;
+                border-bottom: 20px solid transparent;
+                border-right: 20px solid white;
+                float: right;
+            }
+
+            &:hover {
+                color: @teal;
+            }
         }
 
         li > a, li > a:hover {
@@ -49,9 +73,20 @@ input, select, textarea {
         }
     }
 
+
     div.social {
+        padding: 0 10px;
         position: absolute;
         bottom: 20px;
+
+        @media screen and (max-height: 600px) {
+            bottom: -50px;
+            transition: bottom .2s ease-in;
+
+            &:hover {
+                bottom: 0;
+            }
+        }
 
         .list-unstyled {
             padding-left: 0;
@@ -76,7 +111,6 @@ input, select, textarea {
                 color: rgba(255, 255, 255, 0.8);
                 -webkit-transition: all 0.3s ease-in-out;
                 -moz-transition: all 0.3s ease-in-out;
-                -ms-transition: all 0.3s ease-in-out;
                 -o-transition: all 0.3s ease-in-out;
                 transition: all 0.3s ease-in-out;
             }
@@ -123,14 +157,14 @@ input, select, textarea {
     }
 }
 
-.main-col {
-    position: absolute;
-    right: 0;
-    min-height: 100%;
-    width: 77%;
-    background: #fff;
-}
+    .main-col {
+        position: absolute;
+        right: 0;
+        min-height: 100%;
+        width: 77%;
+        background: #fff;
+    }
 
-.footer {
-    padding-left: 20px;
-}
+    .footer {
+        padding-left: 20px;
+    }

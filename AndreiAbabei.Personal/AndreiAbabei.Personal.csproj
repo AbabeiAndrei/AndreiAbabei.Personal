@@ -155,6 +155,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\Scripts\Controllers\layoutController.js" />
+    <Content Include="app\Scripts\polyfill.js" />
     <Content Include="app\Style\style.css">
       <DependentUpon>style.less</DependentUpon>
     </Content>
@@ -200,6 +202,7 @@
     <Content Include="fonts\fontawesome-webfont.eot" />
     <None Include="Properties\PublishProfiles\andreiababei - Web Deploy.pubxml" />
     <Content Include="Resources\me.jpg" />
+    <Content Include="Resources\mebw.png" />
     <Content Include="Scripts\angular-mocks.js" />
     <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\angular.min.js" />

@@ -1,4 +1,5 @@
-﻿using System.Web;
+﻿using System.Collections.Generic;
+using System.Web;
 using System.Web.Optimization;
 
 namespace AndreiAbabei.Personal
@@ -26,6 +27,8 @@ namespace AndreiAbabei.Personal
             bundles.Add(new StyleBundle("~/App/css").Include("~/app/Style/style.css"));
 
             bundles.Add(new ScriptBundle("~/bundles/angular").Include("~/Scripts/angular.min.js"));
+
+            bundles.Add(new ScriptBundle("~/App/Polyfill").Include("~/app/Scripts/polyfill.js"));
         }
     }
 }
